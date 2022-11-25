@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">  
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./script.js"> </script>
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  
+
+
+</head>
+
+
+
+<body>
+
+
+<main>
+<h1>Rozsazení v lodích na vodáckém kurzu 2023 SPŠE Ječná</h1> 
+
+<div class="center">
+  <ul class="nav">
+    <li><a href="./index.html">Hlavní stránka</a></li>
+    <li><a href="./vypis.html">Výpis</a></li>
+  </ul>
+</div>
+<br>
+
+
+<form action="{{url_for('check')}}" method="POST">
+  <div class="container">
+    <h2>Registrační formulář</h2>
+    <p>Vyplňte registrační formulář</p>
+    <hr>
+
+    <label for="jm"><b>Jmeno</b></label>
+    <input type="text" minlength="2" maxlength="20" 
+          placeholder="Zadejte jmeno" 
+          name="jm" id="jm" 
+    required>
+
+    <label for="prj"><b>Prijmeni</b></label>
+    <input type="text" minlength="2" maxlength="20" 
+          placeholder="Zadejte prijmeni" 
+          name="prj" id="prj" 
+    required>
+    <hr>
+    <label for="trida">Trida</label><br>   
+      <input type="radio" id="A4" name="trida" value="A4" required="required">
+        <label for="trida"></label>A4<br>        
+      <input type="radio" id="E4" name="trida" value="E4" required="required" >
+        <label for="trida">E4</label><br>
+      <input type="radio" id="C4a" name="trida" value="C4a" required="required" >
+        <label for="trida">C4a</label><br>
+      <input type="radio" id="C4b" name="trida" value="C4b" required="required" >
+        <label for="trida">C4b</label><br>
+
+      <input type="radio" id="A3" name="trida" value="A3" required="required" >
+        <label for="trida">A3</label><br>
+      <input type="radio" id="B3" name="trida" value="E3" required="required" >
+        <label for="trida">B3</label><br>
+      <input type="radio" id="C3" name="trida" value="C3" required="required" >
+        <label for="trida">C3</label><br>
+      
+      <input type="radio" id="A2" name="trida" value="A2" required="required" >
+        <label for="trida">A2</label><br>
+      <input type="radio" id="B2" name="trida" value="E2" required="required" >
+        <label for="trida">B2</label><br>
+      <input type="radio" id="C2" name="trida" value="C2" required="required" >
+        <label for="trida">C2</label><br>
+      
+      <input type="radio" id="A1" name="trida" value="A1" required="required" >
+        <label for="trida">A1</label><br>
+      <input type="radio" id="B1" name="trida" value="E1" required="required" >
+        <label for="trida">B1</label><br>
+      <input type="radio" id="C1" name="trida" value="C1" required="required" >
+        <label for="trida">C1</label><br>
+    <hr>
+
+    <label for="je_plavec"><b>Zadejte cislo zda umite plavat</b></label>
+    <input type="text" 
+            maxlength="1"
+            placeholder="Zadejte číslo Ano=1/Ne=0" 
+            name="je_plavec" id="je_plavec" 
+    required>
+
+    <label for="kanoe_kamarad"><b>(Nepovine) Jmeno kamarada</b></label>
+    <input type="text" 
+            placeholder="Zadejte jmeno kamarada na kanoy" 
+            name="kanoe_kamarad" id="kanoe_kamarad">
+    <hr>
+    
+    <button id="myButton" type="submit" class="registerbtn">Registrace</button>
+  </div>
+
+  
+</form>
+<br>
+</main>
+
+
+
+<footer >
+  <p>SPŠE Ječná 2023</p>
+  <a class="bt2" href="https://docs.google.com/forms/d/e/1FAIpQLSfx6rMg9_DKx6ye6icQhF6C9GUeO0Iw6Tk8h0cii_anR_Uduw/viewform?usp=sf_link">Feedback</a>
+
+</footer>
+
+<script>
+
+  
+</script>
+
+</body>
+
+</html>

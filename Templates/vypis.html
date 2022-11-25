@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./script.js"> </script>
+  <link rel="stylesheet" href="../static/css/style.css">
+
+  
+
+
+</head>
+
+
+
+<body>
+
+
+<h1>Seznam účastníků</h1> 
+<div class="center">
+  <ul class="nav">
+    <li><a href="./index.html">Hlavní stránka</a></li>
+    <li><a href="./registrace.html">Registrační formulář</a></li>
+    <li><a href="./vypis.html">Výpis</a></li>
+  </ul>
+</div>
+<br>
+
+
+
+
+
+
+
+<div id="content"> 
+  <a class="bt2" href="#nav"><span>Celý seznam</span></a>
+  <div class="expandable" id="nav">
+    {% for ucastnik in ucastnici %}
+  
+    <h3> {{" "+ucastnik[0]+" "+ucastnik[1]}}</h3>
+    <p>Trida: {{ucastnik[2]}},  Kamarad: {{ucastnik[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav22"><span>A4</span></a>
+  <div class="expandable" id="nav22">
+    {% for ucastnika in ca4 %}
+  
+    <h3> {{" "+ucastnika[0]+" "+ucastnika[1]}}</h3>
+    <p>Trida: {{ucastnika[2]}},  Kamarad: {{ucastnika[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav2"><span>E4</span></a>
+  <div class="expandable" id="nav2">    
+    {% for ucastnik2 in ce4 %}  
+    <h3> {{" "+ucastnik2[0]+" "+ucastnik2[1]}}</h3>
+    <p>Trida: {{ucastnik2[2]}},  Kamarad: {{ucastnik2[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav3"><span>C4a</span></a>
+  <div class="expandable" id="nav3">    
+    {% for ucastnik3 in cc4a %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav4"><span>C4b</span></a>
+  <div class="expandable" id="nav4">    
+    {% for ucastnik3 in cc4b %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav5"><span>A3</span></a>
+  <div class="expandable" id="nav5">    
+    {% for ucastnik3 in ca3 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav6"><span>E3</span></a>
+  <div class="expandable" id="nav6">    
+    {% for ucastnik3 in ce3 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav7"><span>C3</span></a>
+  <div class="expandable" id="nav7">    
+    {% for ucastnik3 in cc3 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav8"><span>A2</span></a>
+  <div class="expandable" id="nav8">    
+    {% for ucastnik3 in ca2 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav9"><span>E2</span></a>
+  <div class="expandable" id="nav9">    
+    {% for ucastnik3 in ce2 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav10"><span>C2</span></a>
+  <div class="expandable" id="nav10">    
+    {% for ucastnik3 in cc2 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav11"><span>A1</span></a>
+  <div class="expandable" id="nav11">    
+    {% for ucastnik3 in ca1 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+  <a class="bt2" href="#nav12"><span>E1</span></a>
+  <div class="expandable" id="nav12">    
+    {% for ucastnik3 in ce1 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+  <br>
+
+  <a class="bt2" href="#nav13"><span>C3</span></a>
+  <div class="expandable" id="nav13">    
+    {% for ucastnik3 in cc1 %}  
+    <h3> {{" "+ucastnik3[0]+" "+ucastnik3[1]}}</h3>
+    <p>Trida: {{ucastnik3[2]}},  Kamarad: {{ucastnik3[4]}} </p>    
+    {% endfor %}
+  </div>
+
+
+
+
+
+
+
+
+</div> 
+
+
+<img src="/static/img/7074.jpg" alt="obrazek">
+
+
+
+
+<footer >
+  <p>SPŠE Ječná 2023</p>
+  <a class="bt2" href="https://docs.google.com/forms/d/e/1FAIpQLSfx6rMg9_DKx6ye6icQhF6C9GUeO0Iw6Tk8h0cii_anR_Uduw/viewform?usp=sf_link">Feedback</a>  
+</footer>
+
+</body>
+</html>

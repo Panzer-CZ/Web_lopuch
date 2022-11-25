@@ -1,0 +1,258 @@
+
+
+
+
+
+body{
+  background-color: #53acff;
+}
+
+h1{
+  color: #00026d;
+  text-align: center;
+}
+h2{
+  color: #00026d;
+  text-align: left;
+}
+h3{
+  color: #00026d;
+  text-align: left;
+}
+p{  
+  color: #00026d;
+  text-align: center;
+}
+
+
+footer{
+  background-color: #066ecf;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+}
+
+
+/*--------------------------------------------*/
+/*MENU*/
+ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #00026d;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #0c0fbb;
+  color: #ffffff;
+}
+/*--------------------------------------------*/
+/*FORM*/
+form{
+  border-radius: 5px;
+  background-color: #4275b8;
+  padding: 20px;  
+}
+hr {
+  border: 1px solid#0c0fbb;
+  background-color: #0c0fbb;
+}
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(11, 41, 211);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registerbtn{
+  width: 100%;
+  background-color:#0c0fbb;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerbtn:hover {
+  background-color: #2953ad;
+}
+
+/*--------------------------------------------*/
+/*Roll*/
+
+#content { margin: 50px; } 
+.bt2{
+  background-color: #0c0fbb;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.bt2:hover{
+  background-color: #2953ad;
+}
+.expandable {
+  background: #fff;
+  overflow: hidden;
+  color: #000;   
+
+  transition: all .5s ease-in-out;
+  height: 0;
+ }
+ 
+ .expandable:target {
+  height: auto;
+  padding-left: 10px;
+  background-color: #3d82c2;
+}
+ 
+
+img {
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: dodgerblue;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(0, 48, 110);
+}
+/*__________________________________________________*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FORM Tab*//*
+div{
+  border: 1px solid rgb(11, 0, 112);
+  padding: 8px;   
+  background-color: rgb(169, 224, 255);   
+}
+
+label{
+  color: #00026d;      
+}
+
+hr{
+  border: 10px solid rgb(50, 124, 173);
+  border-radius: 5px;
+}
+
+/*--------- Button -------------*//*
+button{width: 100%;
+  background-color:  #00026d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover{background-color:  #0004d4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;}
+/*-----------------------------------*/
+
+/*------------- INPUT ---------------*//*
+
+input[type=text], select {
+  width : 100%;
+  padding :12px 20px;
+  margin :8px 0;
+  display :inline-block;
+  border :1px solid rgb(110, 110, 110);
+  border-radius :4px;
+  box-sizing :border-box;
+}
+
+input[type=text], input[type=password] {
+  width : 100%;
+  padding : 15px;
+  margin : 5px 0 22px 0;
+  display : inline-block;
+  border : none;
+  background : #f1f1f1;
+}
+
+input[type=text]focus, input[type=password]focus {
+  background-color: #ddd;
+  outline : none;
+}
+
+.container {
+  padding : 16px;
+}
+
+
+.signin {
+  background-color:rgb(169, 224, 255);
+  text-align: center;
+}
+
+
