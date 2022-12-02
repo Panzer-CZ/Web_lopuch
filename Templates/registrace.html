@@ -28,7 +28,7 @@
 <br>
 
 
-<form action="{{url_for('check')}}" method="POST">
+<form id="fform"action="{{url_for('check')}}" method="POST">
   <div class="container">
     <h2>Registrační formulář</h2>
     <p>Vyplňte registrační formulář</p>
@@ -36,15 +36,11 @@
 
     <label for="jm"><b>Jmeno</b></label>
     <input type="text" minlength="2" maxlength="20" 
-          placeholder="Zadejte jmeno" 
+          placeholder="Zadejte jmeno a Prijmeni" 
           name="jm" id="jm" 
     required>
 
-    <label for="prj"><b>Prijmeni</b></label>
-    <input type="text" minlength="2" maxlength="20" 
-          placeholder="Zadejte prijmeni" 
-          name="prj" id="prj" 
-    required>
+    
     <hr>
     <label for="trida">Trida</label><br>   
       <input type="radio" id="A4" name="trida" value="A4" required="required">
@@ -78,12 +74,20 @@
         <label for="trida">C1</label><br>
     <hr>
 
+
+
+
     <label for="je_plavec"><b>Zadejte cislo zda umite plavat</b></label>
+      <input type="radio" id="ano_plave" name="je_plavec" value="0" required="required" >
+        <label for="je_plavec">NE</label><br>
+      <input type="radio" id="ne_neplave" name="je_plavec" value="1" required="required" >
+        <label for="je_plavec">ANO</label><br>
+<!--
     <input type="text" 
             maxlength="1"
             placeholder="Zadejte číslo Ano=1/Ne=0" 
             name="je_plavec" id="je_plavec" 
-    required>
+    required>-->
 
     <label for="kanoe_kamarad"><b>(Nepovine) Jmeno kamarada</b></label>
     <input type="text" 
@@ -107,10 +111,8 @@
 
 </footer>
 
-<script>
+<script src="/static/script/script.js" type="text/javascript"></script>
 
-  
-</script>
 
 </body>
 
