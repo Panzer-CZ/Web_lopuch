@@ -12,6 +12,10 @@ app = Flask(__name__)
 
 data = 0
 
+
+
+
+
 #--------------------------- Route / ALL ---------------------------------------------
 
 @app.route('/')
@@ -125,37 +129,59 @@ def vypis():
 
 @app.route("/check.html", methods=["GET","POST"])
 def check():
+    
+    kontrolas = []
+    with open('Data/tabulka.csv') as soubor:
+        Cteni_csv = csv.reader(soubor, delimiter=',')
+        for bunka in Cteni_csv:
+            kontrolas.append(bunka)
+    
+    
     """
     Check kontroluje příchozí imput data z formuláře na stránce registrace.html
     """    
 
     #inputs
-    je_plavec = (request.form["je_plavec"])
-    kanoe_kamarad = request.form["kanoe_kamarad"]
-
-    jm = request.form["jm"]
-    prj = request.form["prj"]
+    
+    jm = request.form["jm"] 
+    #prj = request.form["prj"]
     trida = request.form["trida"]
+    je_plavec = request.form["je_plavec"]
+    kanoe_kamarad = request.form["kanoe_kamarad"]
+    
+    
+    """
+    jm = request.form.get('jm').strip()
+    trida=request.form.get('trida').strip()
+    je_plavec = request.form.get('je_plavec').strip()
+    kanoe_kamarad = request.form.get('kanoe_kamarad').strip()
+    """
 
     #Kontrola
     if ((je_plavec == "1") or (je_plavec == 1)):
         je_plavec = True
+    #if ((je_plavec == "0") or (je_plavec == 0)):
+     #   je_plavec = False
     else:
         je_plavec = False
     if je_plavec == False:
-        return render_template("400.html")#vrací na stránku error plavec
-    if not re.search("^[a-zA-Z0-9]{2,20}$", jm):
+        return render_template("400.html",)#vrací na stránku error plavec
+    if not re.search("^[a-zA-Z0-9 ]{2,20}$", jm):
         return render_template("400.html")#vrací na stránku error jmeno
-    if not re.search("^[a-zA-Z0-9]{2,20}$", prj):
-        return render_template("400.html")#vrací na stránku error prijmeni
+    #if not re.search("^[a-zA-Z0-9 ]{2,20}$", prj):
+     #   return render_template("400.html")#vrací na stránku error prijmeni
+    for x in kontrolas:
+        if(jm==x[0]):
+            return "Prezdivka je zabrana.", 400
     
-    if ((not re.search("^[a-zA-Z0-9]{2,20}$", kanoe_kamarad))):
+    if ((not re.search("^[a-zA-Z0-9 ]{2,20}$", kanoe_kamarad))):
         bez = str("bez kamarada")
-        studenti.append([jm, prj, trida, je_plavec, bez])#pridani do listu 
+        studenti.append([jm, trida, je_plavec, bez])#pridani do listu 
                 #return render_template("400.html")#vrací na stránku error
     else:
-        studenti.append([jm, prj, trida, je_plavec, kanoe_kamarad])#pridani do listu         
+        studenti.append([jm, trida, je_plavec, kanoe_kamarad])#pridani do listu         
                 #return render_template("400.html")#vrací na stránku error
+    
     
     
 
@@ -175,7 +201,21 @@ def check():
     return render_template("200.html")#vrací na stránku c
 
 #------------------------------------------------------------------------
-
+@app.route('/api/nickname/<jm>', methods=["GET","POST"])
+def check_nickname(jm: str):
+    
+    kontrolas = []
+    with open('Data/tabulka.csv') as soubor:
+        Cteni_csv = csv.reader(soubor, delimiter=',')
+        for bunka in Cteni_csv:
+            kontrolas.append(bunka)
+            
+    
+    for x in kontrolas:
+        if(jm==x[0]):
+            return "NOT OK"
+    
+    return "OK"
 
 
 #------------------------------------------------------------------------
